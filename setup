@@ -1,0 +1,34 @@
+#!$PREFIX/bin/bash
+
+pkg update && pkg upgrade -y
+
+pkg install php php-apache
+
+termux-setup-storage
+
+sleep 5
+
+htdocs='/sdcard/htdocs'
+if [ ! -d $htdocs ];
+then
+  mkdir $htdocs
+fi
+
+pkg install apache2 -y
+
+rm $PREFIX/etc/apache2/httpd.conf
+
+mv httpd.conf $PREFIX/etc/apache2/
+
+rm $PREFIX/bin/apachectl
+
+chmod +x apachectl
+
+mv apachectl $PREFIX/bin/
+
+echo "Apache2 Installed Sucussfully..."
+echo "/sdcard/htdoc - is your document directory.."
+echo "Place your files in /sdcard/htdoc"
+echo "Run apachectl"
+
+#apachectl
