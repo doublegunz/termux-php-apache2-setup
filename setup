@@ -26,9 +26,9 @@ chmod +x apachectl
 
 mv apachectl $PREFIX/bin/
 
-echo "Apache2 Installed Sucussfully..."
-echo "/sdcard/htdoc - is your document directory.."
-echo "Place your files in /sdcard/htdoc"
+echo "PHP and Apache2 Installed Sucessfully..."
+echo "/sdcard/htdocs - is your document directory.."
+echo "Place your files in /sdcard/htdocs"
 echo "Run apachectl"
 
 #apachectl
